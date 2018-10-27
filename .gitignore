@@ -1,1 +1,3 @@
 *.pem
+getdynamo.py
+*.pyc

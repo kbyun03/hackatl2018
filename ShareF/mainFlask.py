@@ -25,7 +25,7 @@ def loginPage():
 			response = ShareF_user.query(
 					KeyConditionExpression = ke, Limit = 1
 				)
-                        print(response)
+                        #print(response)
 			#Query matching data from the data base by using Key Condition Expression
 
 			if response['Items'][0]['Password'] == result['inputPassword']:
@@ -39,7 +39,7 @@ def loginPage():
 				#If everything matches up, redirect the page to /notification
 				
                                 print("success")
-                                #return redirect('/frontPage')
+                                return redirect('/frontPage')
 			else:
 				flash("Wrong Password")
 				#Flash is Flask provided method that is similar to alert() method in Javascript
@@ -56,7 +56,32 @@ def loginPage():
 		#render_template(<htmlfile>, <datatoPushToHtml>)
 		return render_template('login.html')
 
+#front page after login
+@application.route('/frontPage', methods = ['GET', 'POST'])
+def mainPage():
 
+    if request.method == 'POST':
+        print("method is post")
+    else:
+        return render_template('selectScreen.html')
+
+#page for buyers to search the food
+@application.route('/buyer', methods = ['GET', 'POST'])
+def buyerPage():
+
+    if request.method == 'POST':
+        print("method is post")
+    else:
+        return render_template('buyer.html')
+
+#page for seller to upload the food
+@application.route('/seller', methods = ['GET', 'POST'])
+def sellerPage():
+
+    if request.method == 'POST':
+        print("method is post")
+    else:
+        return render_template('seller.html')
 
 if __name__ == '__main__':
 	application.run(host = '0.0.0.0', port = 80)
