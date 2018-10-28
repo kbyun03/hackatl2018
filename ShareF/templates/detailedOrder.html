@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)https://getbootstrap.com/docs/3.3/examples/signin/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content= "text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content= "width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href= "https://getbootstrap.com/docs/3.3/favicon.ico" />
+    <title>
+      ShaF
+    </title><!-- Bootstrap core CSS -->
+    <link href="../static/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../static/styles/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css" />
+    <!-- Custom styles for this template -->
+    <script src="../static/styles/ie-emulation-modes-warning.js" type="text/javascript"> </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="../static/styles/ShaF.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+        body {
+            padding-bottom: 50px;
+        }
+        
+        .CurrentServing, .CardContainer , .CardSections{
+            padding-left: 10%;
+            max-width: 90%
+        }
+        
+        .CardSections{
+            border-style: solid;
+            border-color: #86611B;
+            padding-left: 0;
+            
+            
+        }
+        
+        .eachFood{
+            font-size: 25px;
+            padding-left: 5%;
+            
+        }
+        
+        .foodlistImage{
+            width: 70%;
+            height: 70%;
+            margin-left: 10%;
+        }
+        
+        .starImage{
+            width: 35%;
+            height: 10%;
+            position: relative;
+            left: 45px;
+        }
+        
+        
+        .leftCard{
+            float: left;
+        }
+        
+        .rightCard{
+            float: right;
+        }
+        
+        .CardContainer{
+            padding-left: 10%;
+        }
+        .CardSection {
+            width: 100%; /* Try setting this to 400px or something */
+            display: table;
+            border: 1px solid #86611B;
+            padding-bottom: 10px;
+        }
+        .child {
+            display: table-cell;
+            
+        }
+        .childinner {
+            
+        }
+        .child:first-child  {
+            width: 40%;
+        }
+        
+        .third  {
+            width: 40%;
+            
+        }
+        
+        .serving{
+            padding-left: 20%;
+            font-size: 20px;
+            position:relative;
+            top:-8px;
+        }
+        .thisWarning{
+            position: relative;
+            top:-6px;
+            padding-left: 10%
+        }
+        .order{
+            width: 30%;
+            font-size: 25px;
+            left : -15px;
+            top : 5px;
+        }
+        .ingredients{
+            padding-left: 5%;
+            font-size: 20px;
+            
+        }
+        
+        .description{
+            padding-left: 15%;
+            font-size: 15px;
+            color:#6d521d;
+                
+        }
+        
+        .commentor{
+            font-size: 20px;
+            padding-left: 5%;
+        }
+        
+        .comment{
+            font-size: 20px;
+            padding-left: 5%;
+            color : #c19338
+        }
+        
+        .eachcomment{
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+    </style>
+  </head>
+    
+  <body class = "body">
+      
+      <div class = "header1">
+        <h1 id = "logoText" class = "sheFbig">ShaF</h1>
+      </div>
+    
+      <div class = "CurrentServing">
+        <label class = "eachTitle">Available Food</label> <br>
+      </div>
+      
+      <div class = "CardContainer">
+      <div class="CardSection">
+          <div class="child">
+              <div class="childinner">
+                  <label class = "eachTitle eachFood">Lasagne</label>    
+                      <br>
+                  <!--    
+                  <img src="../static/src/food1.jpeg" class = "foodlistImage">
+                    -->
+                  <img src="../src/food1.jpeg" class = "foodlistImage">
+                  <br>
+                  <label class = "eachTitle eachFood">Ingredients</label>   
+                  <br>
+                  <ul style="padding-left: 5%">    
+                      <li class = "innerText ingredients"> Lasagne Noodles </li>
+                      <li class = "innerText ingredients"> Sausage </li>
+                      <li class = "innerText ingredients"> Beef </li>
+                      <li class = "innerText ingredients"> Onion </li>
+                      <li class = "innerText ingredients"> Egg </li>
+                  </ul>
+              </div>
+              
+          </div>
+          
+          <div class="child">
+              <div class="childinner">
+                  <label class = "eachTitle eachFood">Serving Size</label>
+                  <br>
+                  <label class = "innerText serving"> 5 / 10 people </label>
+                  <br>
+                  <label class = "eachTitle eachFood">Time Left </label>
+                  <br>
+                  <label class = "eachTitle eachFood">Rating</label>
+                  <br>
+                  <br>
+                  <img src="../src/face.jpeg" class = "foodlistImage">
+                  
+              </div>
+          </div>
+          <div class="child third">
+              <div class="childinner">
+                  <label class = "eachTitle eachFood">Price</label>
+                  <label class = "eachTitle eachFood">$ 10</label>
+                  <a class = "largerButton order" id = "UploadButton"  name = "UploadButton" href = "/order"> Order </a>
+                  <br>
+                  <label class = "warning thisWarning">* Price will fall every 30 minutes</label>  
+                  <br>
+                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">time</label>
+                  <br>
+                  <img src="../src/star.png" class = "starImage">
+                  <br>
+                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">Chef : Ken </label>
+                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">Specialized in </label>
+                  <br>
+                  <label class = "innerText ingredients"  id="timer1">Italian </label>
+                  <label class = "innerText ingredients"  id="timer1">American </label>
+                  <label class = "innerText ingredients"  id="timer1">French </label>
+                  <br>
+                  <label class = "innerText ingredients"  id="timer1">Description </label>
+                  <br>
+                  <label class = "innerText description"  id="timer1">A native of Cincinnati, Ohio, Jacob Leatherman found his calling to cuisine while an English student at Ohio State University. He enrolled in the renowned International Culinary Center (formerly French Culinary Institute) in New York City and embraced his new career with passion. Upon graduation he worked in French restaurants in Cincinnati, but the siren song of mountain rivers called to this avid fly-fisherman and prompted a move to the Rocky Mountains. He secured a position as Sous Chef at the Home Ranch, a Relais & Châteaux luxury ranch resort in Clark, Colorado. </label>
+                  
+              </div>
+          </div> 
+          </div>
+        </div>
+      
+      <div class = "CardContainer">
+      <div class="CardSection">
+          <label class = "eachTitle eachFood">Comments</label>
+          <div class = "CardContainer">
+            <div class="CardSection">
+                <label class = "eachTitle commentor">Kevin Byun</label>
+                <div class="CardSection eachcomment">
+                    <label class = "eachTitle comment">Ken is very good chef! I always enjoy his pasta and Lasagne after a long day. I recommend everyone to try.</label>
+                </div>
+              </div>
+              <br>
+              <div class="CardSection">
+                <label class = "eachTitle commentor">Denise Jones</label>
+                <div class="CardSection eachcomment">
+                    <label class = "eachTitle comment">His food is always clean and tasty! Highly recommend</label>
+                </div>
+              </div>
+              <br>
+              <div class="CardSection">
+                <label class = "eachTitle commentor">Glen Robinson</label>
+                <div class="CardSection eachcomment">
+                    <label class = "eachTitle comment">I can't wait to come back and see what else Ken has cooked up. I may not like every dish, but what I do like always blows me away.</label>
+                </div>
+              </div>
+          </div>
+          
+          
+        </div>
+        </div>
+      <br>
+      
+      
+          
+      
+      
+      
+      
+      
+  
+      
+    
+
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>window.jQuery || document.write('<script src="jquery-1.11.3.min.js"><\/script>')</script>
+    
+    <script src="../static/styles/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../static/styles/holder.min.js"></script>
+      <script src="../static/styles/ie10-viewport-bug-workaround.js"
+    type="text/javascript">
+</script>
+      
+      <script>
+          var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+          var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+
+            
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            
+              if (distance < 0) {
+                  clearInterval(x);                
+                  document.getElementById("timer").innerHTML = "EXPIRED";            
+              }
+        
+          }, 1000);
+
+          
+      </script>
+      
+  </body>
+    
+    
+</html>
