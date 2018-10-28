@@ -154,7 +154,7 @@
                   <br>
                   <label class = "warning thisWarning">* Price will fall every 30 minutes</label>  
                   <br>
-                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer">time</label>
+                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">time</label>
                   <br>
                   
               </div>
@@ -201,7 +201,7 @@
                   <br>
                   <label class = "warning thisWarning">* Price will fall every 30 minutes</label>  
                   <br>
-                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer">time</label>
+                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer2">time</label>
                   <br>
                   
               </div>
@@ -234,7 +234,7 @@
 </script>
       
       <script>
-          var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+          var countDownDate = new Date("Oct 28, 2018 18:37:25").getTime();
           var x = setInterval(function() {
               var now = new Date().getTime();
               var distance = countDownDate - now;
@@ -248,11 +248,13 @@
             
               var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-              document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+              document.getElementById("timer1").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+              document.getElementById("timer2").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
             
               if (distance < 0) {
                   clearInterval(x);                
-                  document.getElementById("timer").innerHTML = "EXPIRED";            
+                  document.getElementById("timer1").innerHTML = "EXPIRED";  
+                  document.getElementById("timer2").innerHTML = "EXPIRED"; 
               }
         
           }, 1000);
