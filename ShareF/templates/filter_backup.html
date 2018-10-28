@@ -410,9 +410,41 @@
           center: {lat:40.730610 ,lng : -73.935242 },
           zoom: 10
         });
+	var image = "<div style='float:left'><img src='../static/src/food1_icon.jpg'></div><div style='float:right; padding: 10px;'><b>Ken's Kitchen</b><br/>123 Address<br/> City,Country</div>"
+	
+	var infowindow = new google.maps.InfoWindow({
+          content: image
+        });
+	      var image = "<div style='float:left'><img src='../static/src/food2_icon.jpg'></div><div style='float:right; padding: 10px;'><b>Leo's Food</b><br/>123 Address<br/> City,Country</div>"
+        
+        var infowindow2 = new google.maps.InfoWindow({
+          content: image
+        });
+
+
+
+	var marker = new google.maps.Marker({
+          position: {lat:40.730610 ,lng : -73.935242 },
+          map: map,
+          title: "Ken's Food",
+        });
+	
+	var marker2 = new google.maps.Marker({
+          position: {lat:40.740610 ,lng : -73.925242 },
+          map: map,
+          title: "Leo's Food",
+        });
+
+	marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+	
+	marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+
       }
     </script>
-      
   </body>
     
     
