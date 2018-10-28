@@ -14,7 +14,7 @@
     <link rel="icon" href=
     "https://getbootstrap.com/docs/3.3/favicon.ico" />
     <title>
-      ShareF, be a chef in your neighbor 
+      ShaF, be a chef in your neighbor 
     </title><!-- Bootstrap core CSS -->
     <link href="../static/styles/bootstrap.min.css" rel=
     "stylesheet" type="text/css" />
@@ -28,13 +28,24 @@
     type="text/javascript">
       </script>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  </head>
+      <link href="../static/styles/ShaF.css" rel="stylesheet" type="text/css" />
+  
+    <style>
+        .background{
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+      
+    </style>
+    
+    
+    </head>
     
     
     
-  <body>
+  <body class = "background" background="../static/src/background2.jpeg">
     
-    
+
 
     <div class="container-fluid">
       <form class='form-signin' action="/" method='post' enctype=
@@ -53,20 +64,17 @@
         {% endblock %}
 
           
-          <a href = "/" method = 'get'>
-        <img src = "../static/EatonLogo2.png" alt = "logo" width = "200">
-          </a>
+
+          
+          
           <div class="form-group">
             
-          <h3 class="form-signin-heading">
-          ShareF
-	  </h3>
           <h3 class="form-signin-heading">
             Please sign in
           </h3>
 	  
 	  <h3 class= "form-signin-heading">
-		  Welcome to ShareF. Decide either server or buyer.
+		  Welcome to ShaF
 	  </h3>
 
 
