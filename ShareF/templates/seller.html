@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)https://getbootstrap.com/docs/3.3/examples/signin/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content= "text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content= "width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href= "https://getbootstrap.com/docs/3.3/favicon.ico" />
+    <title>
+      ShaF
+    </title><!-- Bootstrap core CSS -->
+    <link href="../static/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../static/styles/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css" />
+    <!-- Custom styles for this template -->
+    <script src="../static/styles/ie-emulation-modes-warning.js" type="text/javascript"> </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <style>
+        .header1 {
+            width: 100%;
+            height: 150px;
+            background: url('../src/woodHeader.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            overflow: hidden
+        }
+        
+        .sheFbig{
+            color:white;
+            text-align: center;
+            align-items: center;
+            font-size:80px;
+            font-family: serif;
+        }
+        
+        .firstRow, .secondRow, .thirdRow, .fourthRow{
+            position: relative;
+            overflow: auto;
+        }
+        
+        
+
+        .LeftContainer, .RightContainer{
+            height: 40%;
+            width: 30%;
+        }
+        
+        .LeftContainer {
+            float: left;
+            position: relative;
+            left: 15%;
+            max-width: 100%;
+            max-height: 100%
+        }
+        
+        .RightContainer{
+            float: right;
+            position: relative;
+            right: 15%;
+        }
+        
+        .eachTitle{
+            color:#573E11;
+            font-size: 40px;
+            
+        }
+        
+        .foodImage{
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .enterpeople, .enterIngredients{
+            width: 50px;
+            text-align: center;
+            color: #86611B;
+            border-style: solid;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        
+        .enterIngredients{
+            width: 300px;
+            float: left;
+            position: relative;
+            left: 20px;
+            
+        }
+        
+        .menuInput{
+            width: 500px;
+            font-size: 30px;
+            text-align: center;
+            color: #86611B;
+            border-style: solid;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .innerText ,.warning{
+            color:#86611B;
+            font-size: 25px;
+            padding-left: 0px;
+            position: relative;
+            top: 3px
+        }
+        
+        .warning{
+            color:red;
+            font-size: 15px;
+            
+                
+        }
+        
+        .ingredientLi{
+            color:#86611B;
+            font-weight: bold;
+            font-size: 20px;    
+        }
+        
+        .buttonLabel , .largerButton{
+            color:#86611B;
+            width: 80px;
+            border-radius: 10px;
+            border-style: solid;
+            text-align: center;
+            font-size: 15px;
+            float: right;
+            position: relative;
+            left: 20px;
+        }
+        
+        .largerButton{
+            font-size: 35px;
+            width: 250px;
+            border-radius: 20px;
+            
+            
+        }
+        
+        body {
+            padding-bottom: 50px;
+        }
+        
+        
+    </style>
+  </head>
+    
+  <body class = "body">
+    
+      <div class = "header1">
+        <h1 id = "logoText" class = "sheFbig">ShaF</h1>
+      </div>
+      
+      
+      
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="Planned" id="Planned" autocomplete="off" checked> Planned
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="Instance" id="Instance" autocomplete="off"> Instance
+          </label>
+          
+      </div>
+      
+      <br>
+      <div class = "firstRow">
+          <div class = "LeftContainer">
+            <label class = "eachTitle">Photo</label> <br>
+            <img src="../src/food1.jpeg" class = "foodImage">
+          </div>
+
+          <div class = "RightContainer">
+            <label class = "eachTitle">Menu</label> <br>
+            <input placeholder="Lasagna" class = "menuInput">
+              <p><p></p>
+              
+            <label class = "eachTitle">Ingredients</label> 
+              <ul id = "ingredientsUL" name = "ingredientsUL" >
+                  
+              </ul>
+              <input placeholder="Pasta" class = "enterIngredients" name = "newIngredients" , id = "newIngredients">
+              <label class = "buttonLabel" id = "addButton"  name = "addButton"> Add </label>
+            
+          </div>
+      </div>
+      
+      <div class = "secondRow">
+          <div class = "LeftContainer">
+              <label class = "eachTitle">Serving Size</label> <br>
+              <input placeholder="10" class = "enterpeople" name = "peopleCount" , id = "peopleCount">
+              <label class = "innerText"> People </label>
+              
+              <br>
+          </div>
+    </div>
+      <div class = "thirdRow">
+        <div class = "LeftContainer">  
+            <label class = "eachTitle">Price</label>
+            <br>
+            <label class = "innerText"> Recommended :  </label>
+            <label class = "innerText" name = "recommendedPrice" id = "recommendedPrice">$7</label>
+            <br>
+            <label class = "innerText">Your Price : $ </label>
+            <input placeholder="7" class = "enterpeople" name = "priceEnter" , id = "priceEnter">
+            <br>
+            <label class = "warning">* Price will fall every 30 minutes</label>
+                
+          </div>
+      </div>
+      <div class = "fourthRow">
+          <div class = "LeftContainer">  
+            <label class = "eachTitle">Prepare By</label>
+            <br>
+            <input placeholder="Click to set date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="Date" name = "Date"  data-date-inline-picker="true" >
+            <input type="time" id="time" name="time"/>
+          </div>
+          <div class = "RightContainer">
+              
+            <a class = "largerButton" id = "UploadButton"  name = "UploadButton" href = "/upload"> Upload </a>
+              
+          </div>
+      </div>
+      
+  
+      
+    
+
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>window.jQuery || document.write('<script src="jquery-1.11.3.min.js"><\/script>')</script>
+    
+    <script src="../static/styles/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../static/styles/holder.min.js"></script>
+      <script src="../static/styles/ie10-viewport-bug-workaround.js"
+    type="text/javascript">
+</script>
+      
+      <script>
+          
+            var input = document.getElementById("newIngredients");
+            input.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("addButton").click();
+                }
+            });
+          document.getElementById("addButton").addEventListener("click", updateList);
+          function updateList(){
+              if(document.getElementById("newIngredients").value != "")
+              {
+                  var newStuff = document.getElementById("newIngredients").value;
+                  document.getElementById("newIngredients").value = "";
+                  console.log(newStuff);
+                  var li = document.createElement('li');
+                  li.setAttribute('class','ingredientLi');
+                  var ul = document.getElementById("ingredientsUL");
+                  li.innerHTML = newStuff;
+                  ul.appendChild(li);
+              }
+          }
+          
+      </script>
+      
+  </body>
+    
+    
+</html>
