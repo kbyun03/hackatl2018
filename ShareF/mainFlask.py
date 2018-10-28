@@ -83,5 +83,23 @@ def sellerPage():
     else:
         return render_template('seller.html')
 
+#page for seller to upload the food
+@application.route('/sellerList2', methods = ['GET', 'POST'])
+def sellerPage_afterUpload():
+
+    if request.method == 'POST':
+        print("method is post")
+    else:
+        return render_template('sellerList.html')
+
+#page for seller to upload the food
+@application.route('/sellerList', methods = ['GET', 'POST'])
+def sellerPage():
+
+    if request.method == 'POST':
+        print("method is post")
+    else:
+        return render_template('sellerList_before.html')
+
 if __name__ == '__main__':
 	application.run(host = '0.0.0.0', port = 80)
