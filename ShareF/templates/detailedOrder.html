@@ -157,10 +157,7 @@
               <div class="childinner">
                   <label class = "eachTitle eachFood">Lasagne</label>    
                       <br>
-                  <!--    
                   <img src="../static/src/food1.jpeg" class = "foodlistImage">
-                    -->
-                  <img src="../src/food1.jpeg" class = "foodlistImage">
                   <br>
                   <label class = "eachTitle eachFood">Ingredients</label>   
                   <br>
@@ -186,7 +183,7 @@
                   <label class = "eachTitle eachFood">Rating</label>
                   <br>
                   <br>
-                  <img src="../src/face.jpeg" class = "foodlistImage">
+                  <img src="../static/src/face.jpeg" class = "foodlistImage">
                   
               </div>
           </div>
@@ -198,9 +195,9 @@
                   <br>
                   <label class = "warning thisWarning">* Price will fall every 30 minutes</label>  
                   <br>
-                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">time</label>
+                  <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer">time</label>
                   <br>
-                  <img src="../src/star.png" class = "starImage">
+                  <img src="../static/src/star.png" class = "starImage">
                   <br>
                   <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">Chef : Ken </label>
                   <label class = "eachTitle eachFood" style="padding-top: 5px" id="timer1">Specialized in </label>
@@ -286,11 +283,11 @@
             
               var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-              document.getElementById("timer1").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+              document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
             
               if (distance < 0) {
                   clearInterval(x);                
-                  document.getElementById("timer1").innerHTML = "EXPIRED";            
+                  document.getElementById("timer").innerHTML = "EXPIRED";            
               }
         
           }, 1000);
