@@ -72,7 +72,7 @@ def buyerPage():
     if request.method == 'POST':
         print("method is post")
     else:
-        return render_template('buyer.html')
+        return render_template('filter.html')
 
 #page for seller to upload the food
 @application.route('/seller', methods = ['GET', 'POST'])
@@ -93,8 +93,8 @@ def sellerPage_afterUpload():
         return render_template('sellerList.html')
 
 #page for seller to upload the food
-@application.route('/sellerList', methods = ['GET', 'POST'])
-def sellerPage():
+@application.route('/sellerList_before', methods = ['GET', 'POST'])
+def sellerPage_beforeUpload():
 
     if request.method == 'POST':
         print("method is post")
